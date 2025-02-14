@@ -1,6 +1,6 @@
 if [[ -n "$1" ]]
 then
-salida = curl https://pokeapi.co/api/v2/pokemon/$1
+salida=$(curl "https://pokeapi.co/api/v2/pokemon/$1")
 if [[ -n "$salida" ]]
     then
     nombre = $(echo $salida | jq .name)
