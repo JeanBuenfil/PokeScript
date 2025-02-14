@@ -1,7 +1,7 @@
-if test $1 -n
+if [[-n "$1"]]
 then
 salida = curl https://pokeapi.co/api/v2/pokemon/$1
-if salida -n
+if [[-n "$salida"]]
     then
     nombre = $(echo $salida | jq .name)
     orden = $(echo $salida | jq .order)
