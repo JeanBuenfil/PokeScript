@@ -3,11 +3,11 @@ then
 salida=$(curl "https://pokeapi.co/api/v2/pokemon/$1")
 if [[ -n "$salida" ]]
     then
-    nombre = $(echo $salida | jq .name)
-    orden = $(echo $salida | jq .order)
-    id = $(echo $salida | jq .id)
-    peso = $(echo $salida | jq .weight)
-    altura $(echo $salida | jq .height)
+    nombre=$(echo $salida | jq .name)
+    orden=$(echo $salida | jq .order)
+    id=$(echo $salida | jq .id)
+    peso=$(echo $salida | jq .weight)
+    altura=$(echo $salida | jq .height)
 
     echo "
     $nombre (NO. $orden)
